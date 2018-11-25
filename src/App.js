@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Container, Row, Col, View } from "mdbreact";
+import { Container, Row, Col, View, Avatar } from "mdbreact";
 import { newsStyle, Button, Modal, ModalHeader, ModalBody, ModalFooter } from "mdbreact";
 import { Navbar, NavbarBrand, NavbarNav, NavLink, NavItem, NavbarToggler, Collapse } from "mdbreact";
 import { Card, CollapseHeader, CardBody } from "mdbreact";
 import { Chart } from 'react-chartjs-2';
 import YouTube from 'react-youtube';
 import Background from './images/Photo12.jpeg';
+import kyle from './images/kyle.jpg';
+import omeng from './images/omeng.jpg';
+import sharon from './images/sharon.jpg';
+import elmo from './images/elmo.jpg';
+import nate from './images/nate.jpg';
 
 class NavBar extends Component {
   state = {
@@ -53,7 +58,7 @@ class Title extends Component {
     return (
       <section className="d-flex" style={image}>
         <h1 className="white-text font-weight-bold" style={{fontSize: '50px'}}>
-          SCIENCE VS RELIGION
+          Studying the Effects of Science <br/>on Religious Beliefs of <br/>Scientifically-Inclined People
         </h1>
       </section>
     );
@@ -83,8 +88,8 @@ class History extends Component  {
   render() {
     return(
       <Container style={{maxWidth: '80%'}}>
-        <h2 className="h1-responsive font-weight-bold my-5">Science vs Religion History</h2>
-        <p className="dark-grey-text mx-auto mb-5 w-75">
+        <h2 className="h1-responsive font-weight-bold my-5 text-left">Science vs Religion History</h2>
+        <p className="dark-grey-text mx-auto mb-5 w-75 text-left">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
           Ut eget dui non nisi iaculis maximus. Nunc et elit eleifend, 
           malesuada leo a, molestie orci. Curabitur pellentesque sollicitudin 
@@ -307,8 +312,8 @@ class Faculty extends Component {
         <h1 className="h1-responsive font-weight-bold my-5 text-left">Words from the SOSE Faculty</h1>
         <Row style={{marginBottom: '50px'}}>
           <Col lg="6" md="12">
-            <h3>Ma'am X</h3>
-            <h4>Life Science prof</h4>
+            <h3>Panes, Vivian A., Ph.D.</h3>
+            <h4>Full Time Instructor, Biology Dept</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
               Ut eget dui non nisi iaculis maximus. Nunc et elit eleifend, 
@@ -327,21 +332,21 @@ class Faculty extends Component {
 
         <Row style={{marginBottom: '50px'}}>
           <Col lg="6" md="12">
-            <YouTube
-              videoId="gFflmvcXHEk"
-              opts={opts}
-              onReady={this._onReady}
-            />
-          </Col>
-
-          <Col lg="6" md="12">
-            <h3>Ma'am Y</h3>
-            <h4>ECCE prof</h4>
+            <h3>Ramos, Catherine L., M.S.</h3>
+            <h4>Full Time Instructor, ECCE Dept</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
               Ut eget dui non nisi iaculis maximus. Nunc et elit eleifend, 
               malesuada leo a, molestie orci. Curabitur pellentesque sollicitudin 
             </p>
+          </Col>
+
+          <Col lg="6" md="12">
+            <YouTube
+              videoId="ygGb3N_Nko4"
+              opts={opts}
+              onReady={this._onReady}
+            />
           </Col>
         </Row>
       </Container>
@@ -353,7 +358,50 @@ class Faculty extends Component {
   }
 }
 
-class m
+class Team extends Component {
+  render() {
+    return (
+      <footer className="d-flex" style={{width: "100%", alignItems: 'center', justifyContent:'center', backgroundColor: "#4285F4"}}>
+        <section>
+          <h2 className="h1-responsive font-weight-bold my-5 white-text">Our amazing team</h2>
+          <p className="w-responsive mx-auto mb-5 white-text" style={{maxWidth:'80%'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur veniam.</p>
+
+          <Row>
+            <Col md="2" className="mb-md-0 mb-5 offset-md-1">
+              <img src={sharon} className="rounded z-depth-1-half img-fluid" alt="Sample avatar"/>
+              <h4 className="font-weight-bold dark-grey-text my-4">Hyunseo Ha</h4>
+              <h6 className="text-uppercase dark-grey-text mb-3">4 - BS Life Sciences</h6>
+            </Col>
+
+            <Col md="2" className="mb-md-0 mb-5">
+              <img src={nate} className="rounded z-depth-1-half img-fluid" alt="Sample avatar"/>
+              <h4 className="font-weight-bold dark-grey-text my-4">Nate Kibanoff</h4>
+              <h6 className="text-uppercase dark-grey-text mb-3">4 - BS Computer Science</h6>
+            </Col>
+
+            <Col md="2" className="mb-md-0 mb-5">
+              <img src={elmo} className="rounded z-depth-1-half img-fluid" alt="Sample avatar"/>
+              <h4 className="font-weight-bold dark-grey-text my-4">Elmo Lingad</h4>
+              <h6 className="text-uppercase dark-grey-text mb-3">4 - BS Computer Science</h6>
+            </Col>
+
+            <Col md="2" className="mb-md-0 mb-5">
+              <img src={omeng} className="rounded z-depth-1-half img-fluid" alt="Sample avatar"/>
+              <h4 className="font-weight-bold dark-grey-text my-4">Omeng Lopez</h4>
+              <h6 className="text-uppercase dark-grey-text mb-3">4 - BS Life Science</h6>
+            </Col>
+
+            <Col md="2" className="mb-md-0 mb-5">
+              <img src={kyle} className="rounded z-depth-1-half img-fluid" alt="Sample avatar"/>
+              <h4 className="font-weight-bold dark-grey-text my-4">Kyle Ordona</h4>
+              <h6 className="text-uppercase dark-grey-text mb-3">4 - BS Computer Engineering</h6>
+            </Col>
+          </Row>
+        </section>
+      </footer>
+    );
+  }
+}
 
 class App extends Component {
   render() {
@@ -365,6 +413,7 @@ class App extends Component {
         <SOSEContext/>
         <Survey/>
         <Faculty/>
+        <Team/>
       </div>
     );
   }
