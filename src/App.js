@@ -30,7 +30,7 @@ class NavBar extends Component {
         >
           <NavbarNav right>
             <NavItem>
-              <NavLink to="#!">History</NavLink>
+              <NavLink to="History">History</NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="#!">Survey</NavLink>
@@ -83,8 +83,8 @@ class History extends Component  {
   render() {
     return(
       <Container style={{maxWidth: '80%'}}>
-        <h2 className="h1-responsive font-weight-bold my-5 text-center">Science vs Religion History</h2>
-        <p className="dark-grey-text mx-auto mb-5 w-75 text-center">
+        <h2 className="h1-responsive font-weight-bold my-5">Science vs Religion History</h2>
+        <p className="dark-grey-text mx-auto mb-5 w-75">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
           Ut eget dui non nisi iaculis maximus. Nunc et elit eleifend, 
           malesuada leo a, molestie orci. Curabitur pellentesque sollicitudin 
@@ -193,7 +193,7 @@ class History extends Component  {
 class SOSEContext extends Component {
   render() {
     return (
-      <section className="Parallax" style={{paddingTop: '5px'}}>
+      <section className="Parallax" style={{paddingTop: '5px', paddingBottom: '5px'}}>
         <h1 className="h1-responsive font-weight-bold my-5 text-center" style={{color: 'white', fontSize: '50px'}}>SOSE Context</h1>
         <p className="mx-auto mb-5 w-75 text-center" style={{color: 'white'}}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -343,8 +343,6 @@ class Faculty extends Component {
               malesuada leo a, molestie orci. Curabitur pellentesque sollicitudin 
             </p>
           </Col>
-
-          
         </Row>
       </Container>
     );
@@ -354,6 +352,8 @@ class Faculty extends Component {
     event.target.pauseVideo();
   }
 }
+
+class m
 
 class App extends Component {
   render() {
