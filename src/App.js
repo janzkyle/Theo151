@@ -35,7 +35,7 @@ class NavBar extends Component {
         >
           <NavbarNav right>
             <NavItem>
-              <NavLink to="History">History</NavLink>
+              <NavLink to="#History">History</NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="#!">Survey</NavLink>
@@ -87,7 +87,7 @@ class History extends Component  {
 
   render() {
     return(
-      <Container style={{maxWidth: '80%'}}>
+      <Container style={{maxWidth: '80%'}} id={'History'}>
         <h2 className="h1-responsive font-weight-bold my-5 text-left">Science vs Religion History</h2>
         <p className="dark-grey-text mx-auto mb-5 w-75 text-left">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -361,7 +361,7 @@ class Faculty extends Component {
 class Team extends Component {
   render() {
     return (
-      <footer className="d-flex" style={{width: "100%", alignItems: 'center', justifyContent:'center', backgroundColor: "#4285F4"}}>
+      <footer className="d-flex" style={{width: "100%", alignItems: 'center', justifyContent:'center', backgroundColor:'#3F51B5'}}>
         <section>
           <h2 className="h1-responsive font-weight-bold my-5 white-text">Our amazing team</h2>
           <p className="w-responsive mx-auto mb-5 white-text" style={{maxWidth:'80%'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur veniam.</p>
@@ -369,32 +369,32 @@ class Team extends Component {
           <Row>
             <Col md="2" className="mb-md-0 mb-5 offset-md-1">
               <img src={sharon} className="rounded z-depth-1-half img-fluid" alt="Sample avatar"/>
-              <h4 className="font-weight-bold dark-grey-text my-4">Hyunseo Ha</h4>
-              <h6 className="text-uppercase dark-grey-text mb-3">4 - BS Life Sciences</h6>
+              <h4 className="font-weight-bold grey-text my-4">Hyunseo Ha</h4>
+              <h6 className="text-uppercase grey-text mb-3">4 - BS Life Sciences</h6>
             </Col>
 
             <Col md="2" className="mb-md-0 mb-5">
               <img src={nate} className="rounded z-depth-1-half img-fluid" alt="Sample avatar"/>
-              <h4 className="font-weight-bold dark-grey-text my-4">Nate Kibanoff</h4>
-              <h6 className="text-uppercase dark-grey-text mb-3">4 - BS Computer Science</h6>
+              <h4 className="font-weight-bold grey-text my-4">Nate Kibanoff</h4>
+              <h6 className="text-uppercase grey-text mb-3">4 - BS Computer Science</h6>
             </Col>
 
             <Col md="2" className="mb-md-0 mb-5">
               <img src={elmo} className="rounded z-depth-1-half img-fluid" alt="Sample avatar"/>
-              <h4 className="font-weight-bold dark-grey-text my-4">Elmo Lingad</h4>
-              <h6 className="text-uppercase dark-grey-text mb-3">4 - BS Computer Science</h6>
+              <h4 className="font-weight-bold grey-text my-4">Elmo Lingad</h4>
+              <h6 className="text-uppercase grey-text mb-3">4 - BS Computer Science</h6>
             </Col>
 
             <Col md="2" className="mb-md-0 mb-5">
               <img src={omeng} className="rounded z-depth-1-half img-fluid" alt="Sample avatar"/>
-              <h4 className="font-weight-bold dark-grey-text my-4">Omeng Lopez</h4>
-              <h6 className="text-uppercase dark-grey-text mb-3">4 - BS Life Science</h6>
+              <h4 className="font-weight-bold grey-text my-4">Omeng Lopez</h4>
+              <h6 className="text-uppercase grey-text mb-3">4 - BS Life Science</h6>
             </Col>
 
             <Col md="2" className="mb-md-0 mb-5">
               <img src={kyle} className="rounded z-depth-1-half img-fluid" alt="Sample avatar"/>
-              <h4 className="font-weight-bold dark-grey-text my-4">Kyle Ordona</h4>
-              <h6 className="text-uppercase dark-grey-text mb-3">4 - BS Computer Engineering</h6>
+              <h4 className="font-weight-bold grey-text my-4">Kyle Ordona</h4>
+              <h6 className="text-uppercase grey-text mb-3">4 - BS Computer Engineering</h6>
             </Col>
           </Row>
         </section>
