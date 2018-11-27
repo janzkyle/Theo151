@@ -38,13 +38,13 @@ class NavBar extends Component {
               <NavLink to="#History">History</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="#!">Survey</NavLink>
+              <NavLink to="#Survey">Survey</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="#!">Interview</NavLink>
+              <NavLink to="#Interview">Interview</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="#!">Conclusion</NavLink>
+              <NavLink to="#Conclusion">Conclusion</NavLink>
             </NavItem>
           </NavbarNav>
         </Collapse>
@@ -240,7 +240,7 @@ class Survey extends Component {
   }
   render() {
     return(
-      <Container style={{maxWidth: '80%'}}>
+      <Container style={{maxWidth: '80%'}} id={'Survey'}>
         <h1 className="h1-responsive font-weight-bold my-5 text-left">Survey Results</h1>
         <canvas id="pieChart"></canvas>
       </Container>
@@ -308,7 +308,7 @@ class Faculty extends Component {
     };
 
     return (
-      <Container style={{maxWidth: '80%'}}>
+      <Container style={{maxWidth: '80%'}} id={'Interview'}>
         <h1 className="h1-responsive font-weight-bold my-5 text-left">Words from the SOSE Faculty</h1>
         <Row style={{marginBottom: '50px'}}>
           <Col lg="6" md="12">
@@ -323,7 +323,7 @@ class Faculty extends Component {
 
           <Col lg="6" md="12">
             <YouTube
-              videoId="gFflmvcXHEk"
+              videoId="lI8yE1ynWLs"
               opts={opts}
               onReady={this._onReady}
             />
