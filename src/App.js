@@ -22,7 +22,7 @@ class NavBar extends Component {
   toggleCollapse = this.setState({ isOpen: !this.state.isOpen });
   render() {
     return(
-      <Navbar color="indigo" dark expand="md">
+      <Navbar color="indigo" dark expand="md" scrolling fixed="top">
         <NavbarBrand>
           <strong className="white-text">Theo 151</strong>
         </NavbarBrand>
@@ -39,13 +39,13 @@ class NavBar extends Component {
               <NavLink to="#History">History</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="#!">Survey</NavLink>
+              <NavLink to="#Survey">Survey</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="#!">Interview</NavLink>
+              <NavLink to="#Interview">Interview</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="#!">Conclusion</NavLink>
+              <NavLink to="#Conclusion">Conclusion</NavLink>
             </NavItem>
           </NavbarNav>
         </Collapse>
@@ -239,34 +239,111 @@ class Survey extends Component {
   componentDidMount() {
     // Pie chart
     var ctxP = document.getElementById("pieChart").getContext('2d');
-    new Chart(ctxP, {
+    var ctxP2 = document.getElementById("pieChart2").getContext('2d');
+    var chart1 = new Chart(ctxP, {
         type: 'pie',
         data: {
-            labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+            labels: ["Catholic", "Non-Catholic Chirsitan", "Agnostic", "Atheist"],
             datasets: [
                 {
-                    data: [300, 50, 100, 40, 120],
-                    backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
-                    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+                	label: 'Religion of SOSE students',
+                    data: [48, 7, 2, 1],
+                    backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1"],
+                    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5"]
                 }
             ]
         },
         options: {
+        	title: {
+        		fontSize: 36,
+        		display: true,
+        		text: 'What is your religion?'
+        	},
             responsive: true
         }
     });
-  }
+    var chart2 = new Chart(ctxP2, {
+        type: 'pie',
+        data: {
+            labels: ["Practicing", "Non-Practicing"],
+            datasets: [
+                {
+                	label: 'SOSE Practicing',
+                    data: [28, 30],
+                    backgroundColor: ["#F7464A", "#46BFBD"],
+                    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1"]
+                }
+            ]
+        },
+        options: {
+        	title: {
+        		fontSize: 36,
+        		display: true,
+        		text: 'Are you practicing or non-practicing your religion?'
+        	},
+            responsive: true
+        }
+    });
+    //Bar Graph
+    var ctxB = document.getElementById("barChart").getContext('2d');
+    var ctxB2 = document.getElementById("barChart2").getContext('2d');
+    var chart3 = new Chart(ctxB,{
+    	type: 'bar',
+    	data: {
+    		labels: ["1", "2", "3", "4", "5"],
+    		datasets: [{
+    			label: '# of SOSE Students',
+    			data: [5, 7, 8, 16, 22],
+				backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"],
+                borderWidth: 1
+    		}]
+    	},
+    	options:{
+    		title:{
+    			fontSize: 36,
+    			display: true,
+    			text: 'Do you think science and religion can go hand-in-hand?'
+    		},
+    		responsive: true
+    	}
+    });
+    var chart4 = new Chart(ctxB2,{
+    	type: 'bar',
+    	data: {
+    		labels: ["1", "2", "3", "4", "5"],
+    		datasets: [{
+    			label: '# of SOSE Students',
+    			data: [5, 7, 9, 12, 25],
+				backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"],
+                borderWidth: 1
+    		}]
+    	},
+    	options:{
+    		title:{
+    			fontSize: 36,
+    			display: true,
+    			text: "My religious views do not affect the way I see science."
+    		},
+    		responsive: true
+    	}
+    });
+	}
   render() {
     return(
-      <Container style={{maxWidth: '80%'}}>
+      <Container style={{maxWidth: '75%'}} id={'Survey'}>
         <h1 className="h1-responsive font-weight-bold my-5 text-left">Survey Results</h1>
-        <canvas id="pieChart"></canvas>
+        	<canvas id="pieChart"></canvas>      	
+        	<canvas id="pieChart2"></canvas>
+        	<canvas id="barChart"></canvas>
+        	<canvas id="barChart2"></canvas>
       </Container>
     );
   }
 }
 
-/*class Response extends Component {
+class Response extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -314,7 +391,7 @@ class Survey extends Component {
       </Container>
     );
   }
-}*/
+}
 
 /*class Questions extends Component {
   render() {
@@ -355,7 +432,7 @@ class Faculty extends Component {
     };
 
     return (
-      <Container style={{maxWidth: '80%'}}>
+      <Container style={{maxWidth: '80%'}} id={'Interview'}>
         <h1 className="h1-responsive font-weight-bold my-5 text-left">Words from the SOSE Faculty</h1>
         <Row style={{marginBottom: '50px'}}>
           <Col lg="6" md="12">
@@ -370,7 +447,7 @@ class Faculty extends Component {
 
           <Col lg="6" md="12">
             <YouTube
-              videoId="gFflmvcXHEk"
+              videoId="lI8yE1ynWLs"
               opts={opts}
               onReady={this._onReady}
             />
@@ -435,7 +512,7 @@ class Team extends Component {
             <Col md="2" className="mb-md-0 mb-5">
               <img src={omeng} className="rounded z-depth-1-half img-fluid" alt="Sample avatar"/>
               <h4 className="font-weight-bold grey-text my-4">Omeng Lopez</h4>
-              <h6 className="text-uppercase grey-text mb-3">4 - BS Life Science</h6>
+              <h6 className="text-uppercase grey-text mb-3">4 - BS Life Sciences</h6>
             </Col>
 
             <Col md="2" className="mb-md-0 mb-5">
