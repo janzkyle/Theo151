@@ -21,7 +21,7 @@ class NavBar extends Component {
   toggleCollapse = this.setState({ isOpen: !this.state.isOpen });
   render() {
     return(
-      <Navbar color="indigo" dark expand="md">
+      <Navbar color="indigo" dark expand="md" scrolling fixed="top">
         <NavbarBrand>
           <strong className="white-text">Theo 151</strong>
         </NavbarBrand>
@@ -38,10 +38,10 @@ class NavBar extends Component {
               <NavLink to="#History">History</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="#!">Survey</NavLink>
+              <NavLink to="#Survey">Survey</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="#!">Interview</NavLink>
+              <NavLink to="#Interview">Interview</NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="#!">Conclusion</NavLink>
@@ -221,28 +221,62 @@ class Survey extends Component {
   componentDidMount() {
     // Pie chart
     var ctxP = document.getElementById("pieChart").getContext('2d');
-    new Chart(ctxP, {
+    var ctxP2 = document.getElementById("pieChart2").getContext('2d');
+    var chart1 = new Chart(ctxP, {
         type: 'pie',
         data: {
-            labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+            labels: ["Catholic", "Non-Catholic Chirsitan", "Agnostic", "Atheist"],
             datasets: [
                 {
-                    data: [300, 50, 100, 40, 120],
-                    backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
-                    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+                	label: 'Religion of SOSE students',
+                    data: [45, 7, 2, 1],
+                    backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1"],
+                    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5"]
                 }
             ]
         },
         options: {
+        	title: {
+        		fontSize: 48,
+        		display: true,
+        		text: 'What is your religion?'
+        	},
             responsive: true
         }
     });
-  }
+    var chart2 = new Chart(ctxP2, {
+        type: 'pie',
+        data: {
+            labels: ["Practicing", "Non-Practicing"],
+            datasets: [
+                {
+                	label: 'SOSE Practicing',
+                    data: [25, 30],
+                    backgroundColor: ["#F7464A", "#46BFBD"],
+                    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1"]
+                }
+            ]
+        },
+        options: {
+        	title: {
+        		fontSize: 48,
+        		display: true,
+        		text: 'Are you practicing or non-practicing your religion?'
+        	},
+            responsive: true
+        }
+    });
+	}
   render() {
     return(
       <Container style={{maxWidth: '80%'}}>
         <h1 className="h1-responsive font-weight-bold my-5 text-left">Survey Results</h1>
-        <canvas id="pieChart"></canvas>
+        <div class="pie-chart-container">
+        	<canvas id="pieChart"></canvas>
+        </div>
+        <div class="pie-chart-container">
+        	<canvas id="pieChart2"></canvas>
+        </div>
       </Container>
     );
   }
