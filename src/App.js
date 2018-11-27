@@ -229,7 +229,7 @@ class Survey extends Component {
             datasets: [
                 {
                 	label: 'Religion of SOSE students',
-                    data: [45, 7, 2, 1],
+                    data: [48, 7, 2, 1],
                     backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1"],
                     hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5"]
                 }
@@ -237,7 +237,7 @@ class Survey extends Component {
         },
         options: {
         	title: {
-        		fontSize: 48,
+        		fontSize: 36,
         		display: true,
         		text: 'What is your religion?'
         	},
@@ -251,7 +251,7 @@ class Survey extends Component {
             datasets: [
                 {
                 	label: 'SOSE Practicing',
-                    data: [25, 30],
+                    data: [28, 30],
                     backgroundColor: ["#F7464A", "#46BFBD"],
                     hoverBackgroundColor: ["#FF5A5E", "#5AD3D1"]
                 }
@@ -259,30 +259,73 @@ class Survey extends Component {
         },
         options: {
         	title: {
-        		fontSize: 48,
+        		fontSize: 36,
         		display: true,
         		text: 'Are you practicing or non-practicing your religion?'
         	},
             responsive: true
         }
     });
+    //Bar Graph
+    var ctxB = document.getElementById("barChart").getContext('2d');
+    var ctxB2 = document.getElementById("barChart2").getContext('2d');
+    var chart3 = new Chart(ctxB,{
+    	type: 'bar',
+    	data: {
+    		labels: ["1", "2", "3", "4", "5"],
+    		datasets: [{
+    			label: '# of SOSE Students',
+    			data: [5, 7, 8, 16, 22],
+				backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"],
+                borderWidth: 1
+    		}]
+    	},
+    	options:{
+    		title:{
+    			fontSize: 36,
+    			display: true,
+    			text: 'Do you think science and religion can go hand-in-hand?'
+    		},
+    		responsive: true
+    	}
+    });
+    var chart4 = new Chart(ctxB2,{
+    	type: 'bar',
+    	data: {
+    		labels: ["1", "2", "3", "4", "5"],
+    		datasets: [{
+    			label: '# of SOSE Students',
+    			data: [5, 7, 9, 12, 25],
+				backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"],
+                borderWidth: 1
+    		}]
+    	},
+    	options:{
+    		title:{
+    			fontSize: 36,
+    			display: true,
+    			text: "My religious views do not affect the way I see science."
+    		},
+    		responsive: true
+    	}
+    });
 	}
   render() {
     return(
-      <Container style={{maxWidth: '80%'}} id={'Survey'}>
+      <Container style={{maxWidth: '75%'}} id={'Survey'}>
         <h1 className="h1-responsive font-weight-bold my-5 text-left">Survey Results</h1>
-        <div class="pie-chart-container">
-        	<canvas id="pieChart"></canvas>
-        </div>
-        <div class="pie-chart-container">
+        	<canvas id="pieChart"></canvas>      	
         	<canvas id="pieChart2"></canvas>
-        </div>
+        	<canvas id="barChart"></canvas>
+        	<canvas id="barChart2"></canvas>
       </Container>
     );
   }
 }
 
-/*class Response extends Component {
+class Response extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -330,7 +373,7 @@ class Survey extends Component {
       </Container>
     );
   }
-}*/
+}
 
 class Faculty extends Component {
   render() {
