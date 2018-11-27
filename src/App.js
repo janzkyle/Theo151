@@ -139,7 +139,7 @@ class History extends Component  {
               <View hover rounded className="z-depth-1-half mb-4">
                 <img className="img-fluid" src={require('./images/hindrances.jpg')} alt="Sample image"/>
               </View>
-              <h3 className="font-weight-bold dark-grey-text mb-3 p-0">Hindrances to Dialogue</h3>
+              <h3 className="font-weight-bold dark-grey-text mb-3 p-0">What Hinders the Dialogue?</h3>
               <Button color="info" onClick={() => this.toggle(2)}>Read more</Button>
               {/* MODAL */}
               <Modal isOpen={this.state.modal2} toggle={() => this.toggle(2)} size="fluid">
@@ -168,7 +168,7 @@ class History extends Component  {
               <View hover rounded className="z-depth-1-half mb-4">
                 <img className="img-fluid" src={require('./images/Photo06.jpg')} alt="Sample image"/>
               </View>
-              <h3 className="font-weight-bold dark-grey-text mb-3 p-0">Scientists and Religion</h3>
+              <h3 className="font-weight-bold dark-grey-text mb-3 p-0">Can Scientists be Religious?</h3>
               <Button color="info" onClick={() => this.toggle(3)}>Read more</Button>
               {/* MODAL */}
               <Modal isOpen={this.state.modal3} toggle={() => this.toggle(3)} size="fluid">
@@ -202,7 +202,7 @@ class History extends Component  {
                   of the structure of the universe) and toward the infinitesimally small(the exploration of the secrets of matter by nuclear science).” Science has moved from existing in restricted domain of the eccentric to research teams. Diversity and collaboration are no features of this “great 
                   social and international phenomenon.” It plays an important role in uniting men. Science has given men access to powers to not only master the world, but the universe as well. 
                   <br/>
-                  Along with this power comes the question on how the power is to be used. As seen in  bomb dropped in Hirsoshima, a responsibility to safeguard our race’s future has been ushered. For specific fields such as embryology and genetics, the possibility of modifying our heredity becomes a realistic prospect. 
+                  Along with this power comes the question on how the power is to be used. As seen in  bomb dropped in Hiroshima, a responsibility to safeguard our race’s future has been ushered. For specific fields such as embryology and genetics, the possibility of modifying our heredity becomes a realistic prospect. 
                   <br/>
                   Science today involves not only our life on this planet, but also how we relate to the rest of the universe around us. A dream existing generations prior is the ability to escape our planet’s pull of gravity. The person who is able to escape this pull  will be ushering a new time of freedom and unbounded access to the cosmos.
                   <br/><br/>by Jean-Marie Aubert, translated by Paul Barrett, O.F.M.Cap
@@ -343,84 +343,7 @@ class Survey extends Component {
   }
 }
 
-class Response extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      collapseID: 'collapse1'
-    };
-  }
 
-  toggleCollapse = collapseID => () =>
-    this.setState(prevState => ({ collapseID: (prevState.collapseID !== collapseID ? collapseID : '') }));
-
-  render() {
-    const {collapseID} = this.state;
-    return (
-      <Container style={{maxWidth: '80%'}}>
-        <h1 className="h1-responsive font-weight-bold my-5 text-left">Words from the SOSE Faculty</h1>
-        <Card className="mt-3">
-            <CollapseHeader onClick={this.toggleCollapse('collapse1')}>Collapsible Group Item #1
-            </CollapseHeader>
-            <Collapse id="collapse1" isOpen={collapseID}>
-              <CardBody>
-                Pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
-                et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
-                synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-              </CardBody>
-            </Collapse>
-          </Card>
-
-          <Card>
-            <CollapseHeader onClick={this.toggleCollapse('collapse2')}>Collapsible Group Item #2
-            </CollapseHeader>
-            <Collapse id="collapse2" isOpen={collapseID}>
-              <CardBody>
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
-                et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
-                synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-              </CardBody>
-            </Collapse>
-          </Card>
-      </Container>
-    );
-  }
-}
-
-/*class Questions extends Component {
-  render() {
-    const blockElements = {
-      content: 'tabs-content',
-      panel: 'tabs-panel',
-      label: 'tabs-title'
-    };
-
-    return (
-      <Tabbordion blockElements={blockElements} className="tabs" name="tabs">
-        <TabPanel>
-            <TabLabel>My title</TabLabel>
-            <TabContent>
-                <h2>Sample</h2>
-                <p>Content</p>
-            </TabContent>
-        </TabPanel>
-        <TabPanel>
-            <TabLabel>Another title</TabLabel>
-            <TabContent>
-                <h2>Another Sample</h2>
-                <p>Some other kind of content</p>
-            </TabContent>
-        </TabPanel>
-    </Tabbordion>
-    );
-  }
-}*/
 
 class Faculty extends Component {
   render() {
@@ -488,7 +411,6 @@ class Team extends Component {
       <footer className="d-flex" style={{width: "100%", alignItems: 'center', justifyContent:'center', backgroundColor:'#3F51B5'}}>
         <section>
           <h2 className="h1-responsive font-weight-bold my-5 white-text">Our amazing team</h2>
-          <p className="w-responsive mx-auto mb-5 white-text" style={{maxWidth:'80%'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur veniam.</p>
 
           <Row>
             <Col md="2" className="mb-md-0 mb-5 offset-md-1">
