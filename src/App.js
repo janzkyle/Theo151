@@ -60,8 +60,12 @@ class Title extends Component {
   render() {
     return (
       <section className="d-flex" style={image}>
-        <h1 className="white-text font-weight-bold" style={{fontSize: '70px'}}>
-          Observation<br/>&amp;<br/>Revelation
+        <h1 className="white-text font-weight-bold" style={{fontSize: '50px'}}>
+          Observation &amp; Revelation:
+          <br/>
+          A Study on the Religious Sensibilities 
+          <br/>
+          of Scientifically-Inclined Individuals
         </h1>
       </section>
     );
@@ -290,9 +294,9 @@ class Survey extends Component {
     var chart3 = new Chart(ctxB,{
     	type: 'bar',
     	data: {
-    		labels: ["1", "2", "3", "4", "5"],
+    		labels: ["Irreconcilable", "2", "3", "4", "Related"],
     		datasets: [{
-    			label: '# of SOSE Students',
+    			label: '',
     			data: [5, 7, 8, 16, 22],
 				backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
                 hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"],
@@ -311,9 +315,9 @@ class Survey extends Component {
     var chart4 = new Chart(ctxB2,{
     	type: 'bar',
     	data: {
-    		labels: ["1", "2", "3", "4", "5"],
+    		labels: ["Strongly Disagree", "2", "3", "4", "Strongly Agree"],
     		datasets: [{
-    			label: '# of SOSE Students',
+    			label: '',
     			data: [5, 7, 9, 12, 25],
 				backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
                 hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"],
