@@ -88,19 +88,17 @@ class History extends Component  {
 
   render() {
     return(
-      <Container style={{maxWidth: '80%'}} id={'History'}>
+      <Container style={{maxWidth: '80%'}} id="History">
         <h2 className="h1-responsive font-weight-bold my-5 text-left">Science vs Religion History</h2>
         <p className="dark-grey-text mx-auto mb-5 w-75 text-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          Ut eget dui non nisi iaculis maximus. Nunc et elit eleifend, 
-          malesuada leo a, molestie orci. Curabitur pellentesque sollicitudin 
-          nunc quis ornare. Praesent efficitur pellentesque arcu eget finibus. 
-          Donec in lacinia lorem, id porta nibh. Duis imperdiet fringilla 
-          mauris quis mattis. Interdum et malesuada fames ac ante ipsum primis 
-          in faucibus. Quisque non lacinia ex. Donec aliquam, lectus sit amet 
-          rhoncus lacinia, felis lorem imperdiet nisl, ut hendrerit elit nibh 
-          et odio. Integer sit amet elit porttitor quam accumsan pretium eu 
-          finibus tellus. Ut pretium massa sit amet felis semper posuere.
+          One of the things that drove Canon Copernicus to delay publishing his life’s work until close to his death was fear. He was afraid of burning at the stake and the “Roman Catholic Index of Prohibited Books”. The rejection of his work extended beyond the Roman 
+          Catholic congregation to include even Luther and Melanchthon. They disregarded it on the grounds of it being based in theory and on it reportedly being only introduced “as a hypothesis.”
+          <br/><br/>
+          The Catholic institution fostered an environment of  “censorship, Index, and Inquisition” rather than one “for intellectual understanding, effort, and acceptance.” Another famous scientist, Galileo, folded under the immense pressure by renouncing his idea of 
+          heliocentricity as an “error.” This interaction between Galileo and the Church was not an isolated event, but “a symptomatic precedent” that damaged the relationship existing between science and religion. Scientists left the Catholic Church and the clash of science and religion 
+          was set in stone. The Inquisition resulted in a lack of noteworthy Italian and Spanish scientists until the 1900s. 
+          <br/><br/>
+          From: The Beginning of All Things: Science and Religion by Hans Kung
         </p>
         <Row style={{marginBottom: '50px'}}>
           <Col lg="6" md="12">
