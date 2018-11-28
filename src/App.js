@@ -358,16 +358,18 @@ class Faculty extends Component {
       <Container style={{maxWidth: '80%'}} id={'Interview'}>
         <h1 className="h1-responsive font-weight-bold my-5 text-left">Words from the SOSE Faculty</h1>
         <Row style={{marginBottom: '50px'}}>
-          <Col lg="6" md="12">
+          <Col lg="12" md="12">
             <h3>Panes, Vivian A., Ph.D.</h3>
-            <h4>Assistant Professor, Biology Dept</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Ut eget dui non nisi iaculis maximus. Nunc et elit eleifend, 
-              malesuada leo a, molestie orci. Curabitur pellentesque sollicitudin 
-            </p>
-          </Col>
 
+            <h4>Assistant Professor, Biology Dept</h4>
+            <p><i>
+              "Science, like biology, has enhanced my relationship with God. As I've said, I don't believe in a religion. It should be a personal relationship with a sovereign God who created me, who created all living things. I'm a biologist, so I really appreciate every small or great or intricate living thing that God has created. So I don't really have a problem with reconciling between science and my relationship with God." 
+            </i></p>
+
+          </Col>
+		  
+		  <Col lg="3" md="12"/>
+		  
           <Col lg="6" md="12">
             <YouTube
               videoId="lI8yE1ynWLs"
@@ -375,10 +377,12 @@ class Faculty extends Component {
               onReady={this._onReady}
             />
           </Col>
+		  
+		  <Col lg="3" md="12"/>
         </Row>
 
         <Row style={{marginBottom: '50px'}}>
-          <Col lg="6" md="12">
+          <Col lg="12" md="12">
             <h3>Ramos, Catherine L., M.S.</h3>
             <h4>Full Time Instructor, ECCE Dept</h4>
             <p>
@@ -388,6 +392,8 @@ class Faculty extends Component {
             </p>
           </Col>
 
+		  <Col lg="3" md="12"/>
+		  
           <Col lg="6" md="12">
             <YouTube
               videoId="ygGb3N_Nko4"
@@ -395,6 +401,8 @@ class Faculty extends Component {
               onReady={this._onReady}
             />
           </Col>
+		  
+		  <Col lg="3" md="12"/>
         </Row>
       </Container>
     );
